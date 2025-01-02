@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ErrorBoundary } from '@/components/ui/error-boundary'
+import { Analytics } from "@vercel/analytics/react"
 
 const roboto = Roboto({
   variable: "--font-roboto",
