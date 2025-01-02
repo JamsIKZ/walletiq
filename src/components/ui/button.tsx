@@ -1,15 +1,13 @@
 import { forwardRef } from "react"
 import { cn } from "@/lib/utils"
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  asChild?: boolean
-  variant?: 'default' | 'ghost'
-  size?: 'default' | 'sm' | 'lg'
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'default' | 'ghost';
+  size?: 'default' | 'sm' | 'lg';
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
+  ({ className, variant = 'default', size = 'default', ...props }, ref) => {
     return (
       <button
         className={cn(

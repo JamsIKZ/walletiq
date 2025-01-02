@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import { ErrorBoundary } from '@/components/ui/error-boundary'
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -29,7 +30,9 @@ export default function RootLayout({
         className={`${roboto.variable} ${robotoMono.variable}`}
         suppressHydrationWarning
       >
-        {children}
+        <ErrorBoundary>
+          {children}
+        </ErrorBoundary>
       </body>
     </html>
   );
